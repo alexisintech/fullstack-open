@@ -12,7 +12,7 @@ const PORT = 8000
 app.listen(PORT) // port is defined as port 8000
 console.log(`Server running on port ${PORT}`) // lets us know the port is successfully running
 
-let phonebook = [
+let persons = [
     { 
       "id": 1,
       "name": "Arto Hellas", 
@@ -37,12 +37,22 @@ let phonebook = [
 
 //user requests homepage (GET request):
 app.get('/', (request, response) => { //HTTP GET request made to the '/' path
-    response.send('<h1>Hello World!</h1>') //using send() method of the response object.
+    response.send('<h1>Phonebook API</h1>') //using send() method of the response object.
   })
   
   //user requests our api data (GET request):
   app.get('/api/persons', (request, response) => { //HTTP GET request made to the '/api/notes' path
-    response.json(notes) //json() will send the notes array in JSON format
+    response.json(persons) //json() will send the notes array in JSON format
   })
 
-  
+  //user requests how many people are in the phonebook currently.
+  app.get('/info', (request, response) => {
+    let entries = persons.length;
+    response.send(`<h1>Phonebook has info for ${entries} people</h2><br><h2>${Date()}</h2>`)
+  })
+
+  //display information for a single phonebook entry
+  app.get('/api/persons/:id', (request, response) => {
+    
+
+  })
