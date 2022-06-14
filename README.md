@@ -1,5 +1,5 @@
 # Phonebook API
-A simple phonebook API.
+A simple phonebook API.  
 Directory:
 - localhost:8000
 - localhost:8000/api/persons
