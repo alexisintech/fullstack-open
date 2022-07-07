@@ -8,7 +8,7 @@ Directory:
 
 ## How It's Made:
 
-**Tech used:** HTML, JavaScript, Node.js, Express.js, Postman
+**Tech used:** HTML, JavaScript, Node.js, Express.js, Postman  
 [Fullstack open documentation](https://fullstackopen.com/en/part3/node_js_and_express#web-and-express)
 
 ## Lessons Learned:
